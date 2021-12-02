@@ -36,6 +36,30 @@ pipenv run python -m unittest discover
 pipenv run flake8
 ```
 
+### Folder structure
+
+```sh
+.
+├── aoc
+│   ├── dXX
+│   │   ├── __init__.py
+│   │   └── solution.py
+│   ├── __init__.py
+│   ├── file_parser.py
+│   └── logger.py
+├── data
+│   └── dXX_input
+├── tests
+│   ├── dXX
+│   │   ├── fixtures/
+│   │   ├── __init__.py
+│   │   └── test_solution.py
+│   ├── __init__.py
+│   └── test_file_parser.py
+└── dXX.py
+```
+
+
 ## 🗓️ Logs
 
 | Puzzle                                                      |  Stars                                                                     | 📃             |
@@ -48,13 +72,11 @@ pipenv run flake8
 
 [Solution](aoc/d01/solution.py)
 
-To run:
-
 ```sh
 pipenv run python d01.py data/d01_input
 ```
 
-There is no need to build an list of duplets or a list of triplets from the original list. If the original list is long, we will use a lot of memory for no reason. In this puzzle we can do all the operations as we slide through the original list.
+There is no need to build a list of duplets or a list of triplets from the original list. If the original list is long, we will use a lot of memory for no reason. In this puzzle we can do all the operations as we slide through the original list.
 
 **What went well:**
 * I finished both puzzles
@@ -69,11 +91,10 @@ There is no need to build an list of duplets or a list of triplets from the orig
 
 [Solution](aoc/d02/solution.py)
 
-To run:
-
 ```sh
 pipenv run python d02.py data/d02_input
 ```
+
 I created a `Position` class to store the horizontal and depth coordinates and a method to calculate its product.
 Then I accumulated the results of the calculations in a dictionary.
 I also created an enum for the direction, although plain constants would have worked (and are less verbose).

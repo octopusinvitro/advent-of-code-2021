@@ -7,34 +7,31 @@ class Solution:
 
     def __init__(self, commands=[]):
         self._commands = commands
-        self._totals = {}
 
     def part1(self):
-        self._totals = {}
+        totals = self._initialize_totals()
 
         for command in self._commands:
             direction, units = command.split(' ')
-            self._totals[direction] = self._add(direction, units)
+            totals[direction] += int(units)
 
-        return Position(self._get(Direction.FORWARD.value), self._aim())
+        return Position(totals[Direction.FORWARD.value], self._aim(totals))
 
     def part2(self):
-        self._totals = {}
+        totals = self._initialize_totals()
+        totals[self.DEPTH] = 0
 
         for command in self._commands:
             direction, units = command.split(' ')
-            self._totals[direction] = self._add(direction, units)
+            totals[direction] += int(units)
 
             if direction == Direction.FORWARD.value:
-                self._totals[self.DEPTH] = self._add(self.DEPTH, units, self._aim())
+                totals[self.DEPTH] += self._aim(totals) * int(units)
 
-        return Position(self._get(Direction.FORWARD.value), self._get(self.DEPTH))
+        return Position(totals[Direction.FORWARD.value], totals[self.DEPTH])
 
-    def _add(self, direction, units, aim=1):
-        return self._get(direction) + aim * int(units)
+    def _initialize_totals(self):
+        return {direction.value: 0 for direction in Direction}
 
-    def _aim(self):
-        return self._get(Direction.DOWN.value) - self._get(Direction.UP.value)
-
-    def _get(self, direction):
-        return self._totals.get(direction, 0)
+    def _aim(self, totals):
+        return totals[Direction.DOWN.value] - totals[Direction.UP.value]

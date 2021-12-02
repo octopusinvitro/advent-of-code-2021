@@ -14,10 +14,10 @@ class Solution:
         return sum(1 for i in scope if self._comparison2(i, size))
 
     def _comparison1(self, i):
-        return self._depths[i + 1] > self._depths[i]
+        return self._depths[i] < self._depths[i + 1]
 
     def _comparison2(self, i, size):
         current = self._depths[i: i + size]
-        ensuing = self._depths[i + 1: i + 1 + size]
+        nextone = self._depths[i + 1: i + 1 + size]
 
-        return sum(ensuing) > sum(current)
+        return sum(current) < sum(nextone)

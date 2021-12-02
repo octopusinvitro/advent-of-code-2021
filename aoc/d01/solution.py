@@ -3,27 +3,21 @@ class Solution:
         self._depths = depths
 
     def part1(self):
-        count = 0
-        previous, *rest = self._depths
+        scope = range(len(self._depths) - 1)
 
-        for current in rest:
-            if current > previous:
-                count += 1
-            previous = current
-
-        return count
+        return sum(1 for i in scope if self._comparison1(i))
 
     def part2(self):
         size = 3
+        scope = range(len(self._depths) - size)
 
-        count = 0
-        _, *rest = self._depths
-        previous = sum(self._depths[:size])
+        return sum(1 for i in scope if self._comparison2(i, size))
 
-        for i in range(len(rest) - size + 1):
-            current = sum(rest[i:i + size])
-            if current > previous:
-                count += 1
-            previous = current
+    def _comparison1(self, i):
+        return self._depths[i + 1] > self._depths[i]
 
-        return count
+    def _comparison2(self, i, size):
+        current = self._depths[i: i + size]
+        ensuing = self._depths[i + 1: i + 1 + size]
+
+        return sum(ensuing) > sum(current)

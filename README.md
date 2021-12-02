@@ -1,4 +1,4 @@
-[![AoC 2021 total stars](https://img.shields.io/badge/2021-★_2-ffe300)](https://adventofcode.com/2021)
+[![AoC 2021 total stars](https://img.shields.io/badge/2021-★_4-ffe300)](https://adventofcode.com/2021)
 [![Python version](https://badgen.net/badge/python/3.10/yellow)](Pipfile)
 [![License](https://img.shields.io/github/license/octopusinvitro/advent-of-code-2021)](https://github.com/octopusinvitro/advent-of-code-2021/blob/main/LICENSE)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f298667c6c0acac2ef70/maintainability)](https://codeclimate.com/github/octopusinvitro/advent-of-code-2021/maintainability)
@@ -38,9 +38,10 @@ pipenv run flake8
 
 ## 🗓️ Logs
 
-| Puzzle                                                      |  Stars                                                                     | 📃                    |
-| ----------------------------------------------------------- | :------------------------------------------------------------------------: | :-------------------: |
-| **[01: Sonar Sweep](https://adventofcode.com/2021/day/1)**  | [![Day 01](https://badgen.net/badge/01/%E2%98%85%E2%98%85/yellow)](#day01) | [log](#day-1)         |
+| Puzzle                                                      |  Stars                                                                     | 📃             |
+| ----------------------------------------------------------- | :------------------------------------------------------------------------: | :------------: |
+| **[01: Sonar Sweep](https://adventofcode.com/2021/day/1)**  | [![Day 01](https://badgen.net/badge/01/%E2%98%85%E2%98%85/yellow)](#day-1) | [log](#day-1)  |
+| **[02: Dive!](https://adventofcode.com/2021/day/2)**        | [![Day 02](https://badgen.net/badge/02/%E2%98%85%E2%98%85/yellow)](#day-2) | [log](#day-2)  |
 
 
 ### Day 1
@@ -62,3 +63,24 @@ There is no need to build an list of duplets or a list of triplets from the orig
 **What went wrong:**
 * I finished the solution fast and it was short, but then I wanted to improve it and got lost adding exception handling for file opening and integer conversion etc. as well as printing stuff on the terminal. Tomorrow I'll avoid error handling and will just solve the puzzles.
 * Still have a lot to learn about functional python, feels like the refactoring left the code more unreadable.
+
+
+### Day 2
+
+[Solution](aoc/d02/solution.py)
+
+To run:
+
+```sh
+pipenv run python d02.py data/d02_input
+```
+I created a `Position` class to store the horizontal and depth coordinates and a method to calculate its product.
+Then I accumulated the results of the calculations in a dictionary.
+I also created an enum for the direction, although plain constants would have worked (and are less verbose).
+
+**What went well:**
+* The logic I had dismissed in day one turned out to be useful for today too so I extracted it into generic classes.
+* I didn't get distracted with input validation for the new input file.
+
+**What went wrong:**
+* More python learning, not really "wrong", but I am not a fan of the python import system. In order to have a generic file parser and logger that all solutions can use, I had to move the `dXX.py` files under the root folder to avoid the "`ImportError: attempted relative import beyond top-level package`". [This SO answer](https://stackoverflow.com/a/57292232) explains the solution to my issue. I guess I am spoiled by Ruby, where you can do `require_relative '../any/where'` and it works™.

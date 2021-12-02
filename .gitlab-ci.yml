@@ -48,4 +48,4 @@ unittest:
 flake8:
   stage: linter
   script:
-    - pipenv run flake8 aoc tests
+    - pipenv run flake8 *.py aoc tests

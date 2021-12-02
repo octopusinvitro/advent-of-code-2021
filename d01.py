@@ -1,8 +1,8 @@
 import sys
 
-from d01.depths import Depths
-from d01.logger import Logger
-from d01.solution import Solution
+from aoc.logger import Logger
+from aoc.d01.depths import Depths
+from aoc.d01.solution import Solution
 
 logger = Logger()
 depths = Depths(sys.argv, logger).get()

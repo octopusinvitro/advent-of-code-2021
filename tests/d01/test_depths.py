@@ -10,33 +10,6 @@ class TestDepths(TestCase):
     def setUp(self):
         self.script_path = 'ignored/path/to/script'
 
-    def test_requires_input_path_to_be_present(self):
-        depths = Depths([self.script_path], Mock())
-        self.assertEqual(depths.get(), [])
-
-    def test_informs_user_that_path_is_not_present(self):
-        mock = Mock()
-        Depths([self.script_path], mock).get()
-        mock.print_missing_input_error.assert_called_once()
-
-    def test_requires_input_path_to_be_valid(self):
-        depths = Depths([self.script_path, None], Mock())
-        self.assertEqual(depths.get(), [])
-
-    def test_informs_user_that_path_is_not_valid(self):
-        mock = Mock()
-        Depths([self.script_path, None], mock).get()
-        mock.print_missing_input_error.assert_called_once()
-
-    def test_requires_input_file_to_exist(self):
-        depths = Depths([self.script_path, self.input('inexistent')], Mock())
-        self.assertEqual(depths.get(), [])
-
-    def test_informs_user_that_file_is_missing(self):
-        mock = Mock()
-        Depths([self.script_path, self.input('inexistent')], mock).get()
-        mock.print_missing_file_error.assert_called_once()
-
     def test_requires_input_contents_to_be_valid(self):
         argv = [self.script_path, self.input('invalid_input_words')]
         depths = Depths(argv, Mock())

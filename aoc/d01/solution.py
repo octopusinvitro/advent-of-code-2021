@@ -1,5 +1,5 @@
 class Solution:
-    def __init__(self, depths):
+    def __init__(self, depths=[]):
         self._depths = depths
 
     def part1(self):

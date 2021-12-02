@@ -50,7 +50,7 @@ pipenv run flake8
 To run:
 
 ```sh
-pipenv run python aoc/d01.py data/d01_input
+pipenv run python d01.py data/d01_input
 ```
 
 There is no need to build an list of duplets or a list of triplets from the original list. If the original list is long, we will use a lot of memory for no reason. In this puzzle we can do all the operations as we slide through the original list.

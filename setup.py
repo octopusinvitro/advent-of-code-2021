@@ -7,4 +7,5 @@ setuptools.setup(
     author='Octopus in Vitro',
     description='Advent of code 2021 solutions',
     long_description=open('README.md').read(),
+    packages=setuptools.find_packages(include=['aoc', 'aoc.*']),
 )

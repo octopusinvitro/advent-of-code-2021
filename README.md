@@ -1,4 +1,4 @@
-[![AoC 2021 total stars](https://img.shields.io/badge/2021-★_4-ffe300)](https://adventofcode.com/2021)
+[![AoC 2021 total stars](https://img.shields.io/badge/2021-★_6-ffe300)](https://adventofcode.com/2021)
 [![Python version](https://badgen.net/badge/python/3.10/yellow)](Pipfile)
 [![License](https://img.shields.io/github/license/octopusinvitro/advent-of-code-2021)](https://github.com/octopusinvitro/advent-of-code-2021/blob/main/LICENSE)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f298667c6c0acac2ef70/maintainability)](https://codeclimate.com/github/octopusinvitro/advent-of-code-2021/maintainability)
@@ -69,10 +69,11 @@ For example for day one:
 
 ## 🗓️ Logs
 
-| Puzzle                                                      |  Stars                                                                     | 📃             |
-| ----------------------------------------------------------- | :------------------------------------------------------------------------: | :------------: |
-| **[01: Sonar Sweep](https://adventofcode.com/2021/day/1)**  | [![Day 01](https://badgen.net/badge/01/%E2%98%85%E2%98%85/yellow)](#day-1) | [log](#day-1)  |
-| **[02: Dive!](https://adventofcode.com/2021/day/2)**        | [![Day 02](https://badgen.net/badge/02/%E2%98%85%E2%98%85/yellow)](#day-2) | [log](#day-2)  |
+| Puzzle                                                           |  Stars                                                                     | 📃             |
+| ---------------------------------------------------------------- | :------------------------------------------------------------------------: | :------------: |
+| **[01: Sonar Sweep](https://adventofcode.com/2021/day/1)**       | [![Day 01](https://badgen.net/badge/01/%E2%98%85%E2%98%85/yellow)](#day-1) | [log](#day-1)  |
+| **[02: Dive!](https://adventofcode.com/2021/day/2)**             | [![Day 02](https://badgen.net/badge/02/%E2%98%85%E2%98%85/yellow)](#day-2) | [log](#day-2)  |
+| **[03: Binary Diagnostic](https://adventofcode.com/2021/day/3)** | [![Day 03](https://badgen.net/badge/03/%E2%98%85%E2%98%85/yellow)](#day-3) | [log](#day-3)  |
 
 
 ### Day 1
@@ -98,9 +99,26 @@ I created a `Position` class to store the horizontal and depth coordinates and a
 Then I accumulated the results of the calculations in a dictionary.
 I also created an enum for the direction, although plain constants would have worked (and are less verbose).
 
+I liked [this Typescript solution](https://github.com/pmareke/advent-of-code-2021/blob/main/src/day_02/submarine.ts) from @pmareke.
+
 **What went well:**
 * The logic I had dismissed in day one turned out to be useful for today too so I extracted it into generic classes.
 * I didn't get distracted with input validation for the new input file.
 
 **What went wrong:**
 * More python learning, not really "wrong", but I am not a fan of the python import system. In order to have a generic file parser and logger that all solutions can use, I had to move the `dXX.py` files under the root folder to avoid the "`ImportError: attempted relative import beyond top-level package`". [This SO answer](https://stackoverflow.com/a/57292232) explains the solution to my issue. I guess I am spoiled by Ruby, where you can do `require_relative '../any/where'` and it works™.
+
+
+### Day 3
+
+[Solution](aoc/d03/solution.py)
+
+The selection logic smelled of recursion, but I managed to do it with a simple while and I think it's more readable.
+
+For performance I am looping through the report just once, as opposed to other solutions that loop through the bits first, and then through the whole report for every bit (12 times!).
+
+**What went well:**
+* It's the first day that I like my solution more than others
+
+**What went wrong:**
+* Still don't know enough functional python, which would have helped in simplifying those loops.

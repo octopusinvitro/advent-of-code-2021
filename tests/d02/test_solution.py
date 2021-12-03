@@ -17,11 +17,11 @@ class TestSolution(TestCase):
 
     def test_part1_calculates_horizontal_coordinate(self):
         position = self.solution.part1()
-        self.assertEqual(position.horizontal, 15)
+        self.assertEqual(position.value1, 15)
 
     def test_part1_calculates_depth_coordinate(self):
         position = self.solution.part1()
-        self.assertEqual(position.depth, 10)
+        self.assertEqual(position.value2, 10)
 
     def test_part1_calculates_coordinates_product(self):
         position = self.solution.part1()
@@ -29,11 +29,11 @@ class TestSolution(TestCase):
 
     def test_part1_has_default_horizontal_if_no_lines_passed(self):
         position = Solution().part1()
-        self.assertEqual(position.horizontal, 0)
+        self.assertEqual(position.value1, 0)
 
     def test_part1_has_default_depth_if_no_lines_passed(self):
         position = Solution().part1()
-        self.assertEqual(position.depth, 0)
+        self.assertEqual(position.value2, 0)
 
     def test_part1_has_default_product_if_no_lines_passed(self):
         position = Solution().part1()
@@ -41,11 +41,11 @@ class TestSolution(TestCase):
 
     def test_part2_calculates_horizontal_coordinate(self):
         position = self.solution.part2()
-        self.assertEqual(position.horizontal, 15)
+        self.assertEqual(position.value1, 15)
 
     def test_part2_calculates_depth_coordinate(self):
         position = self.solution.part2()
-        self.assertEqual(position.depth, 60)
+        self.assertEqual(position.value2, 60)
 
     def test_part2_calculates_coordinates_product(self):
         position = self.solution.part2()
@@ -53,11 +53,11 @@ class TestSolution(TestCase):
 
     def test_part2_has_default_horizontal_if_no_lines_passed(self):
         position = Solution().part2()
-        self.assertEqual(position.horizontal, 0)
+        self.assertEqual(position.value1, 0)
 
     def test_part2_has_default_depth_if_no_lines_passed(self):
         position = Solution().part2()
-        self.assertEqual(position.depth, 0)
+        self.assertEqual(position.value2, 0)
 
     def test_part2_has_default_product_if_no_lines_passed(self):
         position = Solution().part2()

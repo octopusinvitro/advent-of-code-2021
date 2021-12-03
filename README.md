@@ -51,7 +51,8 @@ For example for day one:
 │   │   └── solution.py
 │   ├── __init__.py
 │   ├── file_parser.py
-│   └── logger.py
+│   ├── logger.py
+│   └── result.py
 ├── data
 │   └── dXX_input
 ├── tests
@@ -60,7 +61,8 @@ For example for day one:
 │   │   ├── __init__.py
 │   │   └── test_solution.py
 │   ├── __init__.py
-│   └── test_file_parser.py
+│   ├── test_file_parser.py
+│   └── test_result.py
 └── dXX.py
 ```
 

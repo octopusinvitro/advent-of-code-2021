@@ -22,18 +22,23 @@ Check out the [setup](setup.md) instructions.
 
 ### Run
 
-See the Log section to see how to run the solution for each day.
+For example for day one:
+
+```sh
+. bin/run d01
+```
 
 ### Tests
 
 ```sh
-pipenv run python -m unittest discover
+. bin/test                 # all tests
+. bin/test tests/a_test.py # single test
 ```
 
 ### Linter
 
 ```sh
-pipenv run flake8
+. bin/lint
 ```
 
 ### Folder structure
@@ -72,10 +77,6 @@ pipenv run flake8
 
 [Solution](aoc/d01/solution.py)
 
-```sh
-pipenv run python d01.py data/d01_input
-```
-
 There is no need to build a list of duplets or a list of triplets from the original list. If the original list is long, we will use a lot of memory for no reason. In this puzzle we can do all the operations as we slide through the original list.
 
 **What went well:**
@@ -90,10 +91,6 @@ There is no need to build a list of duplets or a list of triplets from the origi
 ### Day 2
 
 [Solution](aoc/d02/solution.py)
-
-```sh
-pipenv run python d02.py data/d02_input
-```
 
 I created a `Position` class to store the horizontal and depth coordinates and a method to calculate its product.
 Then I accumulated the results of the calculations in a dictionary.

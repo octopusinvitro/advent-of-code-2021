@@ -43,9 +43,9 @@ stages:
 unittest:
   stage: test
   script:
-    - pipenv run python -m unittest discover
+    - . bin/test
 
 flake8:
   stage: linter
   script:
-    - pipenv run flake8 *.py aoc tests --max-line-length=100
+    - . bin/lint

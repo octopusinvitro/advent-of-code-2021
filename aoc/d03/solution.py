@@ -20,25 +20,24 @@ class Solution:
         return Result(self._int(most_common), self._int(less_common))
 
     def _commons(self, binary_numbers):
-        totals = self._totals(binary_numbers)
         halfsize = math.ceil(len(binary_numbers) / 2)
         most_common = less_common = ''
 
-        for digit in totals:
-            bit = Bit.ON.value if (digit >= halfsize) else Bit.OFF.value
+        for count in self._counts(binary_numbers):
+            bit = Bit.ON.value if (count >= halfsize) else Bit.OFF.value
             most_common += str(bit)
             less_common += str(int(not bit))
 
         return (most_common, less_common)
 
-    def _totals(self, binary_numbers):
-        totals = [0] * len(binary_numbers[0])
+    def _counts(self, binary_numbers):
+        counts = [0] * len(binary_numbers[0])
 
         for number in binary_numbers:
             for position, digit in enumerate(number):
-                totals[position] += int(digit)
+                counts[position] += int(digit)
 
-        return totals
+        return counts
 
     def _select(self, binary_numbers, bit_criteria):
         position = 0

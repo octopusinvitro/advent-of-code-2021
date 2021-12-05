@@ -1,4 +1,4 @@
-[![AoC 2021 total stars](https://img.shields.io/badge/2021-★_8-ffe300)](https://adventofcode.com/2021)
+[![AoC 2021 total stars](https://img.shields.io/badge/2021-★_10-ffe300)](https://adventofcode.com/2021)
 [![Python version](https://badgen.net/badge/python/3.10/yellow)](Pipfile)
 [![License](https://img.shields.io/github/license/octopusinvitro/advent-of-code-2021)](https://github.com/octopusinvitro/advent-of-code-2021/blob/main/LICENSE)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f298667c6c0acac2ef70/maintainability)](https://codeclimate.com/github/octopusinvitro/advent-of-code-2021/maintainability)
@@ -69,12 +69,13 @@ For example for day one:
 
 ## 🗓️ Logs
 
-| Puzzle                                                           |  Stars                                                                     | 📃             |
-| ---------------------------------------------------------------- | :------------------------------------------------------------------------: | :------------: |
-| **[01: Sonar Sweep](https://adventofcode.com/2021/day/1)**       | [![Day 01](https://badgen.net/badge/01/%E2%98%85%E2%98%85/yellow)](#day-1) | [log](#day-1)  |
-| **[02: Dive!](https://adventofcode.com/2021/day/2)**             | [![Day 02](https://badgen.net/badge/02/%E2%98%85%E2%98%85/yellow)](#day-2) | [log](#day-2)  |
-| **[03: Binary Diagnostic](https://adventofcode.com/2021/day/3)** | [![Day 03](https://badgen.net/badge/03/%E2%98%85%E2%98%85/yellow)](#day-3) | [log](#day-3)  |
-| **[04: Giant Squid](https://adventofcode.com/2021/day/4)**       | [![Day 04](https://badgen.net/badge/04/%E2%98%85%E2%98%85/yellow)](#day-4) | [log](#day-4)  |
+| Puzzle                                                              |  Stars                                                                     | 📃             |
+| ------------------------------------------------------------------- | :------------------------------------------------------------------------: | :------------: |
+| **[01: Sonar Sweep](https://adventofcode.com/2021/day/1)**          | [![Day 01](https://badgen.net/badge/01/%E2%98%85%E2%98%85/yellow)](#day-1) | [log](#day-1)  |
+| **[02: Dive!](https://adventofcode.com/2021/day/2)**                | [![Day 02](https://badgen.net/badge/02/%E2%98%85%E2%98%85/yellow)](#day-2) | [log](#day-2)  |
+| **[03: Binary Diagnostic](https://adventofcode.com/2021/day/3)**    | [![Day 03](https://badgen.net/badge/03/%E2%98%85%E2%98%85/yellow)](#day-3) | [log](#day-3)  |
+| **[04: Giant Squid](https://adventofcode.com/2021/day/4)**          | [![Day 04](https://badgen.net/badge/04/%E2%98%85%E2%98%85/yellow)](#day-4) | [log](#day-4)  |
+| **[05: Hydrothermal Venture](https://adventofcode.com/2021/day/5)** | [![Day 05](https://badgen.net/badge/05/%E2%98%85%E2%98%85/yellow)](#day-5) | [log](#day-5)  |
 
 
 ### Day 1
@@ -138,3 +139,16 @@ I created a board to check for wins and a bingo parser to get the numbers and th
 
 **What went wrong:**
 * Because it's similar to tic tac toe I thought I will do it faster but I spend most of the time fighting with Python.
+
+
+### Day 5
+
+[Solution](aoc/d05/solution.py)
+
+I created a `Line` class to calculate the points and check if a line is a diagonal. We don't need the whole grid for this, just a hash to store the sums for points in each line as they come.
+
+**What went well:**
+* Today was easier than the previous days! :D
+
+**What went wrong:**
+* At first I had a method to pass a line to a line and calculate its intersection points, but hashes are always more performant.

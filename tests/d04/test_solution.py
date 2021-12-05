@@ -25,32 +25,14 @@ class TestSolution(TestCase):
         parser = BingoParser(lines)
         self.simple_solution = Solution(parser.parse())
 
-    def test_calculates_last_winner_sum(self):
-        self.assertEqual(self.simple_solution.part2().value1, 15 + 18)
-
-    def test_calculates_last_winner_move(self):
-        self.assertEqual(self.simple_solution.part2().value2, 9)
-
     def test_calculates_last_winner_score(self):
-        self.assertEqual(self.simple_solution.part2().product, (15 + 18) * 9)
-
-    def test_part1_calculates_first_winner_sum(self):
-        self.assertEqual(self.solution().part1().value1, 188)
-
-    def test_part1_calculates_first_winner_move(self):
-        self.assertEqual(self.solution().part1().value2, 24)
+        self.assertEqual(self.simple_solution.part2(), (15 + 18) * 9)
 
     def test_part1_calculates_first_winner_score(self):
-        self.assertEqual(self.solution().part1().product, 4512)
-
-    def test_part2_calculates_last_winner_sum(self):
-        self.assertEqual(self.solution().part2().value1, 148)
-
-    def test_part2_calculates_last_winner_move(self):
-        self.assertEqual(self.solution().part2().value2, 13)
+        self.assertEqual(self.solution().part1(), 4512)
 
     def test_part2_calculates_last_winner_score(self):
-        self.assertEqual(self.solution().part2().product, 1924)
+        self.assertEqual(self.solution().part2(), 1924)
 
     def solution(self):
         path = fixture_path('d04', 'valid_input')

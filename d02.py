@@ -8,5 +8,5 @@ logger = Logger()
 lines = FileParser(sys.argv, logger).lines()
 solution = Solution(lines)
 
-logger.print_solution_part1(solution.part1().product)
-logger.print_solution_part2(solution.part2().product)
+logger.print_solution_part1(solution.part1())
+logger.print_solution_part2(solution.part2())

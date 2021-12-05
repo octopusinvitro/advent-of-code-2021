@@ -21,20 +21,8 @@ class TestSolution(TestCase):
         ]
         self.solution = Solution(report)
 
-    def test_calculates_gamma(self):
-        self.assertEqual(self.solution.part1().value1, 22)
-
-    def test_calculates_epsilon(self):
-        self.assertEqual(self.solution.part1().value2, 9)
-
     def test_calculates_power(self):
-        self.assertEqual(self.solution.part1().product, 198)
-
-    def test_calculates_oxygen(self):
-        self.assertEqual(self.solution.part2().value1, 23)
-
-    def test_calculates_co2(self):
-        self.assertEqual(self.solution.part2().value2, 10)
+        self.assertEqual(self.solution.part1(), 198)
 
     def test_calculates_life_support(self):
-        self.assertEqual(self.solution.part2().product, 230)
+        self.assertEqual(self.solution.part2(), 230)

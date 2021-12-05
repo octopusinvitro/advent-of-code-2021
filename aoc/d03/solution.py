@@ -1,6 +1,5 @@
 import math
 
-from ..result import Result
 from .bit import Bit
 
 
@@ -11,13 +10,13 @@ class Solution:
     def part1(self):
         most_common, less_common = self._commons(self._report)
 
-        return Result(self._int(most_common), self._int(less_common))
+        return self._int(most_common) * self._int(less_common)
 
     def part2(self):
         most_common = self._select(self._report, 0)
         less_common = self._select(self._report, 1)
 
-        return Result(self._int(most_common), self._int(less_common))
+        return self._int(most_common) * self._int(less_common)
 
     def _commons(self, binary_numbers):
         halfsize = math.ceil(len(binary_numbers) / 2)

@@ -1,5 +1,4 @@
 from .direction import Direction
-from ..result import Result
 
 
 class Solution:
@@ -15,7 +14,7 @@ class Solution:
             direction, units = command.split(' ')
             totals[direction] += int(units)
 
-        return Result(totals[Direction.FORWARD.value], self._aim(totals))
+        return totals[Direction.FORWARD.value] * self._aim(totals)
 
     def part2(self):
         totals = self._initialize_totals()
@@ -28,7 +27,7 @@ class Solution:
             if direction == Direction.FORWARD.value:
                 totals[self.DEPTH] += self._aim(totals) * int(units)
 
-        return Result(totals[Direction.FORWARD.value], totals[self.DEPTH])
+        return totals[Direction.FORWARD.value] * totals[self.DEPTH]
 
     def _initialize_totals(self):
         return {direction.value: 0 for direction in Direction}

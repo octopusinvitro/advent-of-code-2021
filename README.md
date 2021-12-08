@@ -1,4 +1,4 @@
-[![AoC 2021 total stars](https://img.shields.io/badge/2021-★_12-ffe300)](https://adventofcode.com/2021)
+[![AoC 2021 total stars](https://img.shields.io/badge/2021-★_14-ffe300)](https://adventofcode.com/2021)
 [![Python version](https://badgen.net/badge/python/3.10/yellow)](Pipfile)
 [![License](https://img.shields.io/github/license/octopusinvitro/advent-of-code-2021)](https://github.com/octopusinvitro/advent-of-code-2021/blob/main/LICENSE)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f298667c6c0acac2ef70/maintainability)](https://codeclimate.com/github/octopusinvitro/advent-of-code-2021/maintainability)
@@ -69,14 +69,15 @@ For example for day one:
 
 ## 🗓️ Logs
 
-| Puzzle                                                              |  Stars                                                                     | 📃             |
-| ------------------------------------------------------------------- | :------------------------------------------------------------------------: | :------------: |
-| **[01: Sonar Sweep](https://adventofcode.com/2021/day/1)**          | [![Day 01](https://badgen.net/badge/01/%E2%98%85%E2%98%85/yellow)](#day-1) | [log](#day-1)  |
-| **[02: Dive!](https://adventofcode.com/2021/day/2)**                | [![Day 02](https://badgen.net/badge/02/%E2%98%85%E2%98%85/yellow)](#day-2) | [log](#day-2)  |
-| **[03: Binary Diagnostic](https://adventofcode.com/2021/day/3)**    | [![Day 03](https://badgen.net/badge/03/%E2%98%85%E2%98%85/yellow)](#day-3) | [log](#day-3)  |
-| **[04: Giant Squid](https://adventofcode.com/2021/day/4)**          | [![Day 04](https://badgen.net/badge/04/%E2%98%85%E2%98%85/yellow)](#day-4) | [log](#day-4)  |
-| **[05: Hydrothermal Venture](https://adventofcode.com/2021/day/5)** | [![Day 05](https://badgen.net/badge/05/%E2%98%85%E2%98%85/yellow)](#day-5) | [log](#day-5)  |
-| **[06: Lanternfish](https://adventofcode.com/2021/day/6)**          | [![Day 06](https://badgen.net/badge/06/%E2%98%85%E2%98%85/yellow)](#day-6) | [log](#day-6)  |
+| Puzzle                                                                 |  Stars                                                                     | 📃            |
+| ---------------------------------------------------------------------- | :------------------------------------------------------------------------: | :-----------: |
+| **[01: Sonar Sweep](https://adventofcode.com/2021/day/1)**             | [![Day 01](https://badgen.net/badge/01/%E2%98%85%E2%98%85/yellow)](#day-1) | [log](#day-1) |
+| **[02: Dive!](https://adventofcode.com/2021/day/2)**                   | [![Day 02](https://badgen.net/badge/02/%E2%98%85%E2%98%85/yellow)](#day-2) | [log](#day-2) |
+| **[03: Binary Diagnostic](https://adventofcode.com/2021/day/3)**       | [![Day 03](https://badgen.net/badge/03/%E2%98%85%E2%98%85/yellow)](#day-3) | [log](#day-3) |
+| **[04: Giant Squid](https://adventofcode.com/2021/day/4)**             | [![Day 04](https://badgen.net/badge/04/%E2%98%85%E2%98%85/yellow)](#day-4) | [log](#day-4) |
+| **[05: Hydrothermal Venture](https://adventofcode.com/2021/day/5)**    | [![Day 05](https://badgen.net/badge/05/%E2%98%85%E2%98%85/yellow)](#day-5) | [log](#day-5) |
+| **[06: Lanternfish](https://adventofcode.com/2021/day/6)**             | [![Day 06](https://badgen.net/badge/06/%E2%98%85%E2%98%85/yellow)](#day-6) | [log](#day-6) |
+| **[07: The Treachery of Whales](https://adventofcode.com/2021/day/7)** | [![Day 07](https://badgen.net/badge/07/%E2%98%85%E2%98%85/yellow)](#day-7) | [log](#day-7) |
 
 
 ### Day 1
@@ -173,3 +174,17 @@ With a solution based in days rather than fish, there is no need to calculate th
 
 **What went wrong:**
 * The memory explosion surprise :D
+
+
+### Day 7
+
+[Solution](aoc/d07/solution.py)
+
+Graphic description of today's puzzle:  
+:octopus::bangbang: ....... :zap::whale::zap: ........:gun: :crab::crab::crab::crab::crab::crab: :bomb:
+
+Jokes aside, today's solution could totally be done by brute force, calculating the sums of all differences and then finding the minimum sum. However, day 6 left me too scared to do that :D
+
+When I read about optimizing differences it reminded me of linear regressions and the least squares method, and then the crab positions sounded like a histogram. When modelling the problem this way, and remembering a bit of statistics from uni, I thought the concept of median may work here, as it is the value right in the middle of a distribution.
+
+For part two I remembered from uni that the quadratic formula `(n + 1) * n / 2` is the sum of a linear progression of n numbers, so I saved a loop there!. In this case we have to calculate the mean, but this worked only for the input, and not for the sample :thinking:. It's been a while since I did these kind of maths so I'm a bit rusty, and I didn't want to spend too much time on it so I did the brute-force method as well. But I will like to come back later to it because I am sure there is a simple solution using maths.

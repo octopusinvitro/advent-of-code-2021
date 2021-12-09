@@ -1,4 +1,4 @@
-[![AoC 2021 total stars](https://img.shields.io/badge/2021-★_14-ffe300)](https://adventofcode.com/2021)
+[![AoC 2021 total stars](https://img.shields.io/badge/2021-★_16-ffe300)](https://adventofcode.com/2021)
 [![Python version](https://badgen.net/badge/python/3.10/yellow)](Pipfile)
 [![License](https://img.shields.io/github/license/octopusinvitro/advent-of-code-2021)](https://github.com/octopusinvitro/advent-of-code-2021/blob/main/LICENSE)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f298667c6c0acac2ef70/maintainability)](https://codeclimate.com/github/octopusinvitro/advent-of-code-2021/maintainability)
@@ -78,6 +78,7 @@ For example for day one:
 | **[05: Hydrothermal Venture](https://adventofcode.com/2021/day/5)**    | [![Day 05](https://badgen.net/badge/05/%E2%98%85%E2%98%85/yellow)](#day-5) | [log](#day-5) |
 | **[06: Lanternfish](https://adventofcode.com/2021/day/6)**             | [![Day 06](https://badgen.net/badge/06/%E2%98%85%E2%98%85/yellow)](#day-6) | [log](#day-6) |
 | **[07: The Treachery of Whales](https://adventofcode.com/2021/day/7)** | [![Day 07](https://badgen.net/badge/07/%E2%98%85%E2%98%85/yellow)](#day-7) | [log](#day-7) |
+| **[08: Seven Segment Search](https://adventofcode.com/2021/day/8)**    | [![Day 08](https://badgen.net/badge/08/%E2%98%85%E2%98%85/yellow)](#day-8) | [log](#day-8) |
 
 
 ### Day 1
@@ -188,3 +189,11 @@ Jokes aside, today's solution could totally be done by brute force, calculating 
 When I read about optimizing differences it reminded me of linear regressions and the least squares method, and then the crab positions sounded like a histogram. When modelling the problem this way, and remembering a bit of statistics from uni, I thought the concept of median may work here, as it is the value right in the middle of a distribution.
 
 For part two I remembered from uni that the quadratic formula `(n + 1) * n / 2` is the sum of a linear progression of n numbers, so I saved a loop there!. In this case we have to calculate the mean, but this worked only for the input, and not for the sample :thinking:. It's been a while since I did these kind of maths so I'm a bit rusty, and I didn't want to spend too much time on it so I did the brute-force method as well. But I will like to come back later to it because I am sure there is a simple solution using maths.
+
+### Day 8
+
+**What went well:**
+* I really enjoyed working on this one!
+
+**What went wrong:**
+* First I got it wrong thinking the scrambled patterns could be mapped directly, until I noticed there were several 5 configurations for the same entry. Then I couldn't make the correct implementation work, so I surrendered to brute-forcing it by calculating all the 5000 permutations of `abcdefg` and using them to find the correct mappings. Not proud, but this puzzle was taking too much time :sweat_smile::sweat_drops:.

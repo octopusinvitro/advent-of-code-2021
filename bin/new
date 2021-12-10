@@ -1,5 +1,5 @@
 git checkout main
-git checkout -b d0$1
-cp -r aoc/d02 aoc/d0$1
-cp -r tests/d02 tests/d0$1
-cp d02.py d0$1.py
+git checkout -b d$1
+cp -r aoc/d02 aoc/d$1
+cp -r tests/d02 tests/d$1
+cp d02.py d$1.py

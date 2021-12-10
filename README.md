@@ -1,4 +1,4 @@
-[![AoC 2021 total stars](https://img.shields.io/badge/2021-★_16-ffe300)](https://adventofcode.com/2021)
+[![AoC 2021 total stars](https://img.shields.io/badge/2021-★_18-ffe300)](https://adventofcode.com/2021)
 [![Python version](https://badgen.net/badge/python/3.10/yellow)](Pipfile)
 [![License](https://img.shields.io/github/license/octopusinvitro/advent-of-code-2021)](https://github.com/octopusinvitro/advent-of-code-2021/blob/main/LICENSE)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f298667c6c0acac2ef70/maintainability)](https://codeclimate.com/github/octopusinvitro/advent-of-code-2021/maintainability)
@@ -79,6 +79,7 @@ For example for day one:
 | **[06: Lanternfish](https://adventofcode.com/2021/day/6)**             | [![Day 06](https://badgen.net/badge/06/%E2%98%85%E2%98%85/yellow)](#day-6) | [log](#day-6) |
 | **[07: The Treachery of Whales](https://adventofcode.com/2021/day/7)** | [![Day 07](https://badgen.net/badge/07/%E2%98%85%E2%98%85/yellow)](#day-7) | [log](#day-7) |
 | **[08: Seven Segment Search](https://adventofcode.com/2021/day/8)**    | [![Day 08](https://badgen.net/badge/08/%E2%98%85%E2%98%85/yellow)](#day-8) | [log](#day-8) |
+| **[09: Smoke Basin](https://adventofcode.com/2021/day/9)**             | [![Day 09](https://badgen.net/badge/09/%E2%98%85%E2%98%85/yellow)](#day-9) | [log](#day-9) |
 
 
 ### Day 1
@@ -190,6 +191,7 @@ When I read about optimizing differences it reminded me of linear regressions an
 
 For part two I remembered from uni that the quadratic formula `(n + 1) * n / 2` is the sum of a linear progression of n numbers, so I saved a loop there!. In this case we have to calculate the mean, but this worked only for the input, and not for the sample :thinking:. It's been a while since I did these kind of maths so I'm a bit rusty, and I didn't want to spend too much time on it so I did the brute-force method as well. But I will like to come back later to it because I am sure there is a simple solution using maths.
 
+
 ### Day 8
 
 **What went well:**
@@ -197,3 +199,16 @@ For part two I remembered from uni that the quadratic formula `(n + 1) * n / 2` 
 
 **What went wrong:**
 * First I got it wrong thinking the scrambled patterns could be mapped directly, until I noticed there were several 5 configurations for the same entry. Then I couldn't make the correct implementation work, so I surrendered to brute-forcing it by calculating all the 5000 permutations of `abcdefg` and using them to find the correct mappings. Not proud, but this puzzle was taking too much time :sweat_smile::sweat_drops:.
+
+
+### Day 9
+
+Today's puzzle reminded me of the "game of life", which I have solved many times. However once I started working on it, it was a bit different.
+
+I solved the second part using recursion. I created a `Location` class for all location-related stuff like finding neighbours or keeping track of visited locations. Then I created a `Heightmap` class, with all the operations related with the actual values of height, like finding the basins.
+
+**What went well:**
+* It wasn't too difficult and I used a bit of the experience gained solving "game of life".
+
+**What went wrong:**
+* I solved the second part using the neighbours with recursion, but it didn't work for a while because I had a `return` in the wrong place and that drove me crazy. Also, puzzles are starting to take longer to solve, not because they are difficult but because there's more code to write. **So from now on I may not be able to do a puzzle a day.**

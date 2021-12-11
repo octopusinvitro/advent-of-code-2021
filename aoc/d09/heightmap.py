@@ -47,13 +47,13 @@ class Heightmap:
         return self._location.visited_locations
 
     def _is_low_point(self, row, cell):
-        neighbours = self._location.neighbours(row, cell)
+        neighbours = self._location.neighbours4(row, cell)
         neighbour_heights = [self._height_at(r, c) for r, c in neighbours]
 
         return self._height_at(row, cell) < min(neighbour_heights)
 
     def _valid_neighbours(self, row, cell):
-        neighbours = self._location.neighbours(row, cell)
+        neighbours = self._location.neighbours4(row, cell)
 
         return [[row, cell] for row, cell in neighbours if self._is_valid(row, cell)]
 

@@ -195,6 +195,8 @@ For part two I remembered from uni that the quadratic formula `(n + 1) * n / 2` 
 
 ### Day 8
 
+[Solution](aoc/d08/solution.py)
+
 **What went well:**
 * I really enjoyed working on this one!
 
@@ -203,6 +205,8 @@ For part two I remembered from uni that the quadratic formula `(n + 1) * n / 2` 
 
 
 ### Day 9
+
+[Solution](aoc/d09/solution.py)
 
 Today's puzzle reminded me of the "game of life", which I have solved many times. However once I started working on it, it was a bit different.
 

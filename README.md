@@ -1,4 +1,4 @@
-[![AoC 2021 total stars](https://img.shields.io/badge/2021-★_18-ffe300)](https://adventofcode.com/2021)
+[![AoC 2021 total stars](https://img.shields.io/badge/2021-★_20-ffe300)](https://adventofcode.com/2021)
 [![Python version](https://badgen.net/badge/python/3.10/yellow)](Pipfile)
 [![License](https://img.shields.io/github/license/octopusinvitro/advent-of-code-2021)](https://github.com/octopusinvitro/advent-of-code-2021/blob/main/LICENSE)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f298667c6c0acac2ef70/maintainability)](https://codeclimate.com/github/octopusinvitro/advent-of-code-2021/maintainability)
@@ -69,20 +69,21 @@ For example for day one:
 
 ## 🗓️ Logs
 
-| Puzzle                                                                 |  Stars                                                                     | 📃            |
-| ---------------------------------------------------------------------- | :------------------------------------------------------------------------: | :-----------: |
-| **[01: Sonar Sweep](https://adventofcode.com/2021/day/1)**             | [![Day 01](https://badgen.net/badge/01/%E2%98%85%E2%98%85/yellow)](#day-1) | [log](#day-1) |
-| **[02: Dive!](https://adventofcode.com/2021/day/2)**                   | [![Day 02](https://badgen.net/badge/02/%E2%98%85%E2%98%85/yellow)](#day-2) | [log](#day-2) |
-| **[03: Binary Diagnostic](https://adventofcode.com/2021/day/3)**       | [![Day 03](https://badgen.net/badge/03/%E2%98%85%E2%98%85/yellow)](#day-3) | [log](#day-3) |
-| **[04: Giant Squid](https://adventofcode.com/2021/day/4)**             | [![Day 04](https://badgen.net/badge/04/%E2%98%85%E2%98%85/yellow)](#day-4) | [log](#day-4) |
-| **[05: Hydrothermal Venture](https://adventofcode.com/2021/day/5)**    | [![Day 05](https://badgen.net/badge/05/%E2%98%85%E2%98%85/yellow)](#day-5) | [log](#day-5) |
-| **[06: Lanternfish](https://adventofcode.com/2021/day/6)**             | [![Day 06](https://badgen.net/badge/06/%E2%98%85%E2%98%85/yellow)](#day-6) | [log](#day-6) |
-| **[07: The Treachery of Whales](https://adventofcode.com/2021/day/7)** | [![Day 07](https://badgen.net/badge/07/%E2%98%85%E2%98%85/yellow)](#day-7) | [log](#day-7) |
-| **[08: Seven Segment Search](https://adventofcode.com/2021/day/8)**    | [![Day 08](https://badgen.net/badge/08/%E2%98%85%E2%98%85/yellow)](#day-8) | [log](#day-8) |
-| **[09: Smoke Basin](https://adventofcode.com/2021/day/9)**             | [![Day 09](https://badgen.net/badge/09/%E2%98%85%E2%98%85/yellow)](#day-9) | [log](#day-9) |
+| Puzzle                                                                 |  Stars                                                                      | 📃             |
+| ---------------------------------------------------------------------- | :-------------------------------------------------------------------------: | :------------: |
+| **[01: Sonar Sweep](https://adventofcode.com/2021/day/1)**             | [![Day 01](https://badgen.net/badge/01/%E2%98%85%E2%98%85/yellow)](#day-01) | [log](#day-01) |
+| **[02: Dive!](https://adventofcode.com/2021/day/2)**                   | [![Day 02](https://badgen.net/badge/02/%E2%98%85%E2%98%85/yellow)](#day-02) | [log](#day-02) |
+| **[03: Binary Diagnostic](https://adventofcode.com/2021/day/3)**       | [![Day 03](https://badgen.net/badge/03/%E2%98%85%E2%98%85/yellow)](#day-03) | [log](#day-03) |
+| **[04: Giant Squid](https://adventofcode.com/2021/day/4)**             | [![Day 04](https://badgen.net/badge/04/%E2%98%85%E2%98%85/yellow)](#day-04) | [log](#day-04) |
+| **[05: Hydrothermal Venture](https://adventofcode.com/2021/day/5)**    | [![Day 05](https://badgen.net/badge/05/%E2%98%85%E2%98%85/yellow)](#day-05) | [log](#day-05) |
+| **[06: Lanternfish](https://adventofcode.com/2021/day/6)**             | [![Day 06](https://badgen.net/badge/06/%E2%98%85%E2%98%85/yellow)](#day-06) | [log](#day-06) |
+| **[07: The Treachery of Whales](https://adventofcode.com/2021/day/7)** | [![Day 07](https://badgen.net/badge/07/%E2%98%85%E2%98%85/yellow)](#day-07) | [log](#day-07) |
+| **[08: Seven Segment Search](https://adventofcode.com/2021/day/8)**    | [![Day 08](https://badgen.net/badge/08/%E2%98%85%E2%98%85/yellow)](#day-08) | [log](#day-08) |
+| **[09: Smoke Basin](https://adventofcode.com/2021/day/9)**             | [![Day 09](https://badgen.net/badge/09/%E2%98%85%E2%98%85/yellow)](#day-09) | [log](#day-09) |
+| **[10: Syntax Scoring](https://adventofcode.com/2021/day/10)**         | [![Day 10](https://badgen.net/badge/10/%E2%98%85%E2%98%85/yellow)](#day-10) | [log](#day-10) |
 
 
-### Day 1
+### Day 01
 
 [Solution](aoc/d01/solution.py)
 
@@ -97,7 +98,7 @@ There is no need to build a list of duplets or a list of triplets from the origi
 * Still have a lot to learn about functional python, feels like the refactoring left the code more unreadable.
 
 
-### Day 2
+### Day 02
 
 [Solution](aoc/d02/solution.py)
 
@@ -115,7 +116,7 @@ I liked [this Typescript solution](https://github.com/pmareke/advent-of-code-202
 * More python learning, not really "wrong", but I am not a fan of the python import system. In order to have a generic file parser and logger that all solutions can use, I had to move the `dXX.py` files under the root folder to avoid the "`ImportError: attempted relative import beyond top-level package`". [This SO answer](https://stackoverflow.com/a/57292232) explains the solution to my issue. I guess I am spoiled by Ruby, where you can do `require_relative '../any/where'` and it works™.
 
 
-### Day 3
+### Day 03
 
 [Solution](aoc/d03/solution.py)
 
@@ -130,7 +131,7 @@ For performance I am looping through the report just once, as opposed to other s
 * Still don't know enough functional python, which would have helped in simplifying those loops.
 
 
-### Day 4
+### Day 04
 
 [Solution](aoc/d04/solution.py)
 
@@ -145,7 +146,7 @@ I created a board to check for wins and a bingo parser to get the numbers and th
 * Because it's similar to tic tac toe I thought I will do it faster but I spend most of the time fighting with Python.
 
 
-### Day 5
+### Day 05
 
 [Solution](aoc/d05/solution.py)
 
@@ -158,7 +159,7 @@ I created a `Line` class to calculate the points and check if a line is a diagon
 * At first I had a method to pass a line to a line and calculate its intersection points, but hashes are always more performant.
 
 
-### Day 6
+### Day 06
 
 [Solution](aoc/d06/solution.py)
 
@@ -178,7 +179,7 @@ With a solution based in days rather than fish, there is no need to calculate th
 * The memory explosion surprise :D
 
 
-### Day 7
+### Day 07
 
 [Solution](aoc/d07/solution.py)
 
@@ -192,7 +193,9 @@ When I read about optimizing differences it reminded me of linear regressions an
 For part two I remembered from uni that the quadratic formula `(n + 1) * n / 2` is the sum of a linear progression of n numbers, so I saved a loop there!. In this case we have to calculate the mean, but this worked only for the input, and not for the sample :thinking:. It's been a while since I did these kind of maths so I'm a bit rusty, and I didn't want to spend too much time on it so I did the brute-force method as well. But I will like to come back later to it because I am sure there is a simple solution using maths.
 
 
-### Day 8
+### Day 08
+
+[Solution](aoc/d08/solution.py)
 
 **What went well:**
 * I really enjoyed working on this one!
@@ -201,7 +204,9 @@ For part two I remembered from uni that the quadratic formula `(n + 1) * n / 2` 
 * First I got it wrong thinking the scrambled patterns could be mapped directly, until I noticed there were several 5 configurations for the same entry. Then I couldn't make the correct implementation work, so I surrendered to brute-forcing it by calculating all the 5000 permutations of `abcdefg` and using them to find the correct mappings. Not proud, but this puzzle was taking too much time :sweat_smile::sweat_drops:.
 
 
-### Day 9
+### Day 09
+
+[Solution](aoc/d09/solution.py)
 
 Today's puzzle reminded me of the "game of life", which I have solved many times. However once I started working on it, it was a bit different.
 
@@ -212,3 +217,20 @@ I solved the second part using recursion. I created a `Location` class for all l
 
 **What went wrong:**
 * I solved the second part using the neighbours with recursion, but it didn't work for a while because I had a `return` in the wrong place and that drove me crazy. Also, puzzles are starting to take longer to solve, not because they are difficult but because there's more code to write. **So from now on I may not be able to do a puzzle a day.**
+
+
+### Day 10
+
+[Solution](aoc/d10/solution.py)
+
+This one was easy and took less time in comparison with the previous.
+
+I scan a line and keep track of the opening characters. When I find a closing character, I pop the last opening character. If it doesn't correspond, it's a corrupt line, if it does, it's an incomplete line.
+
+The file is parsed once, and the illegal characters and closing sequences collected. Then they are passed to a sorting class that knows how to sort each.
+
+**What went well:**
+* It was short and fast to do!
+
+**What went wrong:**
+* Nothing.

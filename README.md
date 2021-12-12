@@ -1,4 +1,4 @@
-[![AoC 2021 total stars](https://img.shields.io/badge/2021-★_20-ffe300)](https://adventofcode.com/2021)
+[![AoC 2021 total stars](https://img.shields.io/badge/2021-★_22-ffe300)](https://adventofcode.com/2021)
 [![Python version](https://badgen.net/badge/python/3.10/yellow)](Pipfile)
 [![License](https://img.shields.io/github/license/octopusinvitro/advent-of-code-2021)](https://github.com/octopusinvitro/advent-of-code-2021/blob/main/LICENSE)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f298667c6c0acac2ef70/maintainability)](https://codeclimate.com/github/octopusinvitro/advent-of-code-2021/maintainability)
@@ -81,6 +81,7 @@ For example for day one:
 | **[08: Seven Segment Search](https://adventofcode.com/2021/day/8)**    | [![Day 08](https://badgen.net/badge/08/%E2%98%85%E2%98%85/yellow)](#day-08) | [log](#day-08) |
 | **[09: Smoke Basin](https://adventofcode.com/2021/day/9)**             | [![Day 09](https://badgen.net/badge/09/%E2%98%85%E2%98%85/yellow)](#day-09) | [log](#day-09) |
 | **[10: Syntax Scoring](https://adventofcode.com/2021/day/10)**         | [![Day 10](https://badgen.net/badge/10/%E2%98%85%E2%98%85/yellow)](#day-10) | [log](#day-10) |
+| **[11: Dumbo Octopus](https://adventofcode.com/2021/day/11)**          | [![Day 11](https://badgen.net/badge/11/%E2%98%85%E2%98%85/yellow)](#day-11) | [log](#day-11) |
 
 
 ### Day 01
@@ -234,3 +235,16 @@ The file is parsed once, and the illegal characters and closing sequences collec
 
 **What went wrong:**
 * Nothing.
+
+
+### Day 10
+
+[Solution](aoc/d10/solution.py)
+
+Another example that can be solved with recursion. Also, **dumbo octopus**! Like the one I have in my Github presentation :D
+
+**What went well:**
+* I could reuse my location class from day 9, and learned how to make a deep copy of an array in python.
+
+**What went wrong:**
+* At first I wasn't getting the right result on the second part, but the tests were passing. The only difference between running the solution and running the tests was that the lines were read only once in the solution. That gave me the idea to deepcopy the array instead of just assigning it.

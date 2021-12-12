@@ -8,47 +8,89 @@ class TestLocation(TestCase):
     def setUp(self):
         self.location = Location(3, 3)
 
-    def test_calculates_1_cell_distance_neighbours_around(self):
+    def test_calculates_1_cell_distance_four_neighbours_around(self):
         neighbours = [
                    [0,1],
             [1,0],        [1,2],
                    [2,1]
         ]
-        self.assertEqual(self.location.neighbours(1, 1), neighbours)
+        self.assertEqual(self.location.neighbours4(1, 1), neighbours)
 
-    def test_takes_care_of_the_left_border(self):
+    def test_takes_care_of_the_left_border_for_four_neighbours(self):
         neighbours = [
             [0,0],
                    [1,1],
             [2,0]
         ];
 
-        self.assertEqual(self.location.neighbours(1, 0), neighbours)
+        self.assertEqual(self.location.neighbours4(1, 0), neighbours)
 
-    def test_takes_care_of_the_right_border(self):
+    def test_takes_care_of_the_right_border_for_four_neighbours(self):
         neighbours = [
                    [0,2],
             [1,1],
                    [2,2]
         ];
 
-        self.assertEqual(self.location.neighbours(1, 2), neighbours)
+        self.assertEqual(self.location.neighbours4(1, 2), neighbours)
 
-    def test_takes_care_of_the_top_border(self):
+    def test_takes_care_of_the_top_border_for_four_neighbours(self):
         neighbours = [
             [0,0],        [0,2],
                    [1,1]
         ];
 
-        self.assertEqual(self.location.neighbours(0, 1), neighbours)
+        self.assertEqual(self.location.neighbours4(0, 1), neighbours)
 
-    def test_takes_care_of_the_bottom_border(self):
+    def test_takes_care_of_the_bottom_border_for_four_neighbours(self):
         neighbours = [
                    [1,1],
             [2,0],        [2,2],
         ];
 
-        self.assertEqual(self.location.neighbours(2, 1), neighbours)
+        self.assertEqual(self.location.neighbours4(2, 1), neighbours)
+
+    def test_calculates_1_cell_distance_eight_neighbours_around(self):
+        neighbours = [
+            [0,0], [0,1], [0,2],
+            [1,0],        [1,2],
+            [2,0], [2,1], [2,2]
+        ]
+        self.assertEqual(self.location.neighbours8(1, 1), neighbours)
+
+    def test_takes_care_of_the_left_border_for_eight_neighbours(self):
+        neighbours = [
+            [0,0], [0,1],
+                   [1,1],
+            [2,0], [2,1]
+        ];
+
+        self.assertEqual(self.location.neighbours8(1, 0), neighbours)
+
+    def test_takes_care_of_the_right_border_for_eight_neighbours(self):
+        neighbours = [
+            [0,1], [0,2],
+            [1,1],
+            [2,1], [2,2]
+        ];
+
+        self.assertEqual(self.location.neighbours8(1, 2), neighbours)
+
+    def test_takes_care_of_the_top_border_for_eight_neighbours(self):
+        neighbours = [
+            [0,0],        [0,2],
+            [1,0], [1,1], [1,2]
+        ];
+
+        self.assertEqual(self.location.neighbours8(0, 1), neighbours)
+
+    def test_takes_care_of_the_bottom_border_for_eight_neighbours(self):
+        neighbours = [
+            [1,0], [1,1], [1,2],
+            [2,0],        [2,2]
+        ];
+
+        self.assertEqual(self.location.neighbours8(2, 1), neighbours)
 
     def test_adds_location_to_visited(self):
         self.location.visit([0, 0])

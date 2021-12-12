@@ -1,4 +1,4 @@
-[![AoC 2021 total stars](https://img.shields.io/badge/2021-★_22-ffe300)](https://adventofcode.com/2021)
+[![AoC 2021 total stars](https://img.shields.io/badge/2021-★_24-ffe300)](https://adventofcode.com/2021)
 [![Python version](https://badgen.net/badge/python/3.10/yellow)](Pipfile)
 [![License](https://img.shields.io/github/license/octopusinvitro/advent-of-code-2021)](https://github.com/octopusinvitro/advent-of-code-2021/blob/main/LICENSE)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f298667c6c0acac2ef70/maintainability)](https://codeclimate.com/github/octopusinvitro/advent-of-code-2021/maintainability)
@@ -82,6 +82,7 @@ For example for day one:
 | **[09: Smoke Basin](https://adventofcode.com/2021/day/9)**             | [![Day 09](https://badgen.net/badge/09/%E2%98%85%E2%98%85/yellow)](#day-09) | [log](#day-09) |
 | **[10: Syntax Scoring](https://adventofcode.com/2021/day/10)**         | [![Day 10](https://badgen.net/badge/10/%E2%98%85%E2%98%85/yellow)](#day-10) | [log](#day-10) |
 | **[11: Dumbo Octopus](https://adventofcode.com/2021/day/11)**          | [![Day 11](https://badgen.net/badge/11/%E2%98%85%E2%98%85/yellow)](#day-11) | [log](#day-11) |
+| **[12: Passage Pathing](https://adventofcode.com/2021/day/12)**        | [![Day 12](https://badgen.net/badge/12/%E2%98%85%E2%98%85/yellow)](#day-12) | [log](#day-12) |
 
 
 ### Day 01
@@ -237,9 +238,9 @@ The file is parsed once, and the illegal characters and closing sequences collec
 * Nothing.
 
 
-### Day 10
+### Day 11
 
-[Solution](aoc/d10/solution.py)
+[Solution](aoc/d11/solution.py)
 
 Another example that can be solved with recursion. Also, **dumbo octopus**! Like the one I have in my Github presentation :D
 
@@ -248,3 +249,20 @@ Another example that can be solved with recursion. Also, **dumbo octopus**! Like
 
 **What went wrong:**
 * At first I wasn't getting the right result on the second part, but the tests were passing. The only difference between running the solution and running the tests was that the lines were read only once in the solution. That gave me the idea to deepcopy the array instead of just assigning it.
+
+
+### Day 12
+
+[Solution](aoc/d12/solution.py)
+
+Wow this one was time consuming! I got it working after filling in 6 or 7 pages of manual recursion and `ipdb` is on fire :fire: :D
+
+At first I thought about [the Dijkstra algorithm](https://en.wikipedia.org/wiki/Dijkstra's_algorithm) which we had to implement at work, but it's used to find the shortest path and here we want to find all the paths. So I ended up with a more manual solution using recursion. If I had more time I would have given it a go.
+
+**What went well:**
+* One of the problems I had was that after coming back from a recursion stack into the previous for loop when finishing a path, the changes done to the path and the visited caves had to be undone back to that point. I remembered that solving an unbeatable tic tac toe with a minimax algorithm presents the same problem, and it is solved by creating a deep copy of the data structure and making the changes to the copy, then passing the copy to the next recursion stack. It worked here too!
+
+* Also, I had to perform the same operation (deep copy plus appending a new item) in both the path list and the visited set, so I wanted to extract this common logic, but lists and sets don't have any common methods to add items. That's how I learned about `itertools.chain`! I then just have to cast it to list or set.
+
+**What went wrong:**
+* These problems are not necessarily difficult or complex, but they are very time consuming. I wish I knew a way to not have to sit and manually follow the loops both with pen and paper and with `ipdb` in the CLI in order to debug it.

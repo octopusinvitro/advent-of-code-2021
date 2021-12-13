@@ -194,6 +194,8 @@ When I read about optimizing differences it reminded me of linear regressions an
 
 For part two I remembered from uni that the quadratic formula `(n + 1) * n / 2` is the sum of a linear progression of n numbers, so I saved a loop there!. In this case we have to calculate the mean, but this worked only for the input, and not for the sample :thinking:. It's been a while since I did these kind of maths so I'm a bit rusty, and I didn't want to spend too much time on it so I did the brute-force method as well. But I will like to come back later to it because I am sure there is a simple solution using maths.
 
+P.S. Someone wrote [a paper on this puzzle](https://www.reddit.com/r/adventofcode/comments/rawxad/2021_day_7_part_2_i_wrote_a_paper_on_todays/) :D
+
 
 ### Day 08
 
@@ -243,6 +245,8 @@ The file is parsed once, and the illegal characters and closing sequences collec
 [Solution](aoc/d11/solution.py)
 
 Another example that can be solved with recursion. Also, **dumbo octopus**! Like the one I have in my Github presentation :D
+
+This one was visualization material! I'm as skilled as I'd like to but some people did some nice ones like [this](https://www.youtube.com/watch?v=GsSI8O_w33Q), and [this](https://imgur.com/a/xhPgdGX).
 
 **What went well:**
 * I could reuse my location class from day 9, and learned how to make a deep copy of an array in python.

@@ -1,4 +1,4 @@
-[![AoC 2021 total stars](https://img.shields.io/badge/2021-★_24-ffe300)](https://adventofcode.com/2021)
+[![AoC 2021 total stars](https://img.shields.io/badge/2021-★_26-ffe300)](https://adventofcode.com/2021)
 [![Python version](https://badgen.net/badge/python/3.10/yellow)](Pipfile)
 [![License](https://img.shields.io/github/license/octopusinvitro/advent-of-code-2021)](https://github.com/octopusinvitro/advent-of-code-2021/blob/main/LICENSE)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f298667c6c0acac2ef70/maintainability)](https://codeclimate.com/github/octopusinvitro/advent-of-code-2021/maintainability)
@@ -83,6 +83,7 @@ For example for day one:
 | **[10: Syntax Scoring](https://adventofcode.com/2021/day/10)**         | [![Day 10](https://badgen.net/badge/10/%E2%98%85%E2%98%85/yellow)](#day-10) | [log](#day-10) |
 | **[11: Dumbo Octopus](https://adventofcode.com/2021/day/11)**          | [![Day 11](https://badgen.net/badge/11/%E2%98%85%E2%98%85/yellow)](#day-11) | [log](#day-11) |
 | **[12: Passage Pathing](https://adventofcode.com/2021/day/12)**        | [![Day 12](https://badgen.net/badge/12/%E2%98%85%E2%98%85/yellow)](#day-12) | [log](#day-12) |
+| **[13: Transparent Origami](https://adventofcode.com/2021/day/13)**    | [![Day 13](https://badgen.net/badge/13/%E2%98%85%E2%98%85/yellow)](#day-13) | [log](#day-13) |
 
 
 ### Day 01
@@ -270,3 +271,35 @@ At first I thought about [the Dijkstra algorithm](https://en.wikipedia.org/wiki/
 
 **What went wrong:**
 * These problems are not necessarily difficult or complex, but they are very time consuming. I wish I knew a way to not have to sit and manually follow the loops both with pen and paper and with `ipdb` in the CLI in order to debug it.
+
+
+### Day 13
+
+[Solution](aoc/d13/solution.py)
+
+I loved today's puzzle, it wasn't too time consuming and it could be solved just with sets, without making a grid until the very end, when you need to visualize it to read the code.
+
+This was my code!
+
+```
+ #  # #  #  ##     #  ### ####  ### ##
+ #  #  # # #  #    # #  # #    #  # #
+ ####   ##    #    #  ###  #   #  # #
+ #  #  # # ## #    # #  #   #   ### #
+ #  #  # # #  #    # #  #    #  # # #  #
+ #  # #  # ###  ####  ### #### #  #  ##
+```
+
+It's mirrored! I changed the code to reverse it and space the cells:
+
+```
+    # #   # # #     # # # #   # # #     #           # #     #     #   #     #
+      #   #     #         #   #     #   #         #     #   #   #     #     #
+      #   #     #       #     # # #     #         #         # #       # # # #
+      #   # # #       #       #     #   #         #   # #   #   #     #     #
+#     #   #   #     #         #     #   #         #     #   #   #     #     #
+  # #     #     #   # # # #   # # #     # # # #     # # #   #     #   #     #
+```
+
+It's now easy to see that my code is `JRZBLGKH` :D
+What was your code?

@@ -1,4 +1,4 @@
-[![AoC 2021 total stars](https://img.shields.io/badge/2021-★_26-ffe300)](https://adventofcode.com/2021)
+[![AoC 2021 total stars](https://img.shields.io/badge/2021-★_28-ffe300)](https://adventofcode.com/2021)
 [![Python version](https://badgen.net/badge/python/3.10/yellow)](Pipfile)
 [![License](https://img.shields.io/github/license/octopusinvitro/advent-of-code-2021)](https://github.com/octopusinvitro/advent-of-code-2021/blob/main/LICENSE)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f298667c6c0acac2ef70/maintainability)](https://codeclimate.com/github/octopusinvitro/advent-of-code-2021/maintainability)
@@ -69,21 +69,22 @@ For example for day one:
 
 ## 🗓️ Logs
 
-| Puzzle                                                                 |  Stars                                                                      | 📃             |
-| ---------------------------------------------------------------------- | :-------------------------------------------------------------------------: | :------------: |
-| **[01: Sonar Sweep](https://adventofcode.com/2021/day/1)**             | [![Day 01](https://badgen.net/badge/01/%E2%98%85%E2%98%85/yellow)](#day-01) | [log](#day-01) |
-| **[02: Dive!](https://adventofcode.com/2021/day/2)**                   | [![Day 02](https://badgen.net/badge/02/%E2%98%85%E2%98%85/yellow)](#day-02) | [log](#day-02) |
-| **[03: Binary Diagnostic](https://adventofcode.com/2021/day/3)**       | [![Day 03](https://badgen.net/badge/03/%E2%98%85%E2%98%85/yellow)](#day-03) | [log](#day-03) |
-| **[04: Giant Squid](https://adventofcode.com/2021/day/4)**             | [![Day 04](https://badgen.net/badge/04/%E2%98%85%E2%98%85/yellow)](#day-04) | [log](#day-04) |
-| **[05: Hydrothermal Venture](https://adventofcode.com/2021/day/5)**    | [![Day 05](https://badgen.net/badge/05/%E2%98%85%E2%98%85/yellow)](#day-05) | [log](#day-05) |
-| **[06: Lanternfish](https://adventofcode.com/2021/day/6)**             | [![Day 06](https://badgen.net/badge/06/%E2%98%85%E2%98%85/yellow)](#day-06) | [log](#day-06) |
-| **[07: The Treachery of Whales](https://adventofcode.com/2021/day/7)** | [![Day 07](https://badgen.net/badge/07/%E2%98%85%E2%98%85/yellow)](#day-07) | [log](#day-07) |
-| **[08: Seven Segment Search](https://adventofcode.com/2021/day/8)**    | [![Day 08](https://badgen.net/badge/08/%E2%98%85%E2%98%85/yellow)](#day-08) | [log](#day-08) |
-| **[09: Smoke Basin](https://adventofcode.com/2021/day/9)**             | [![Day 09](https://badgen.net/badge/09/%E2%98%85%E2%98%85/yellow)](#day-09) | [log](#day-09) |
-| **[10: Syntax Scoring](https://adventofcode.com/2021/day/10)**         | [![Day 10](https://badgen.net/badge/10/%E2%98%85%E2%98%85/yellow)](#day-10) | [log](#day-10) |
-| **[11: Dumbo Octopus](https://adventofcode.com/2021/day/11)**          | [![Day 11](https://badgen.net/badge/11/%E2%98%85%E2%98%85/yellow)](#day-11) | [log](#day-11) |
-| **[12: Passage Pathing](https://adventofcode.com/2021/day/12)**        | [![Day 12](https://badgen.net/badge/12/%E2%98%85%E2%98%85/yellow)](#day-12) | [log](#day-12) |
-| **[13: Transparent Origami](https://adventofcode.com/2021/day/13)**    | [![Day 13](https://badgen.net/badge/13/%E2%98%85%E2%98%85/yellow)](#day-13) | [log](#day-13) |
+| Puzzle                                                                  |  Stars                                                                      | 📃             |
+| ----------------------------------------------------------------------- | :-------------------------------------------------------------------------: | :------------: |
+| **[01: Sonar Sweep](https://adventofcode.com/2021/day/1)**              | [![Day 01](https://badgen.net/badge/01/%E2%98%85%E2%98%85/yellow)](#day-01) | [log](#day-01) |
+| **[02: Dive!](https://adventofcode.com/2021/day/2)**                    | [![Day 02](https://badgen.net/badge/02/%E2%98%85%E2%98%85/yellow)](#day-02) | [log](#day-02) |
+| **[03: Binary Diagnostic](https://adventofcode.com/2021/day/3)**        | [![Day 03](https://badgen.net/badge/03/%E2%98%85%E2%98%85/yellow)](#day-03) | [log](#day-03) |
+| **[04: Giant Squid](https://adventofcode.com/2021/day/4)**              | [![Day 04](https://badgen.net/badge/04/%E2%98%85%E2%98%85/yellow)](#day-04) | [log](#day-04) |
+| **[05: Hydrothermal Venture](https://adventofcode.com/2021/day/5)**     | [![Day 05](https://badgen.net/badge/05/%E2%98%85%E2%98%85/yellow)](#day-05) | [log](#day-05) |
+| **[06: Lanternfish](https://adventofcode.com/2021/day/6)**              | [![Day 06](https://badgen.net/badge/06/%E2%98%85%E2%98%85/yellow)](#day-06) | [log](#day-06) |
+| **[07: The Treachery of Whales](https://adventofcode.com/2021/day/7)**  | [![Day 07](https://badgen.net/badge/07/%E2%98%85%E2%98%85/yellow)](#day-07) | [log](#day-07) |
+| **[08: Seven Segment Search](https://adventofcode.com/2021/day/8)**     | [![Day 08](https://badgen.net/badge/08/%E2%98%85%E2%98%85/yellow)](#day-08) | [log](#day-08) |
+| **[09: Smoke Basin](https://adventofcode.com/2021/day/9)**              | [![Day 09](https://badgen.net/badge/09/%E2%98%85%E2%98%85/yellow)](#day-09) | [log](#day-09) |
+| **[10: Syntax Scoring](https://adventofcode.com/2021/day/10)**          | [![Day 10](https://badgen.net/badge/10/%E2%98%85%E2%98%85/yellow)](#day-10) | [log](#day-10) |
+| **[11: Dumbo Octopus](https://adventofcode.com/2021/day/11)**           | [![Day 11](https://badgen.net/badge/11/%E2%98%85%E2%98%85/yellow)](#day-11) | [log](#day-11) |
+| **[12: Passage Pathing](https://adventofcode.com/2021/day/12)**         | [![Day 12](https://badgen.net/badge/12/%E2%98%85%E2%98%85/yellow)](#day-12) | [log](#day-12) |
+| **[13: Transparent Origami](https://adventofcode.com/2021/day/13)**     | [![Day 13](https://badgen.net/badge/13/%E2%98%85%E2%98%85/yellow)](#day-13) | [log](#day-13) |
+| **[14: Extended Polymerization](https://adventofcode.com/2021/day/14)** | [![Day 14](https://badgen.net/badge/14/%E2%98%85%E2%98%85/yellow)](#day-14) | [log](#day-14) |
 
 
 ### Day 01
@@ -317,3 +318,14 @@ It's mirrored! I changed the display logic to reverse it and space the cells:
 
 It's now easy to see that my code is `JRZBLGKH` :D
 What was your code?
+
+
+### Day 14
+
+[Solution](aoc/d14/solution.py)
+
+As someone pointed out, this puzzle was very similar to that on day 6! First part solved easily, second part explodes laptop and you need to model the problem differently.
+
+I stored the counts of the new insertions but also the counts of the new pairs formed in every step, so that I could use them in the next iteration.
+
+This one took a lot of pen and pencil again, to figure out the right algorithm! At first I had the pairs in a "visited" set, but the trick was that at some point the pairs repeat as well, which is why you need to keep track of their counts too, so that you can count the elements properly.

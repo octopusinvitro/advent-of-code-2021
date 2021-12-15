@@ -277,9 +277,23 @@ At first I thought about [the Dijkstra algorithm](https://en.wikipedia.org/wiki/
 
 [Solution](aoc/d13/solution.py)
 
-I loved today's puzzle, it wasn't too time consuming and it could be solved just with sets, without making a grid until the very end, when you need to visualize it to read the code.
+I loved today's puzzle, it wasn't too time consuming and it could be solved just with sets and using geometry, without making a grid until the very end, when you need to visualize it to read the code.
 
-This was my code!
+For the vertical fold, the cell index doesn't change, and the the row index is unchanged too from zero to the folding coordinate. Beyond the folding coordinate, we have to swap the rows and bring them up, so the conversion is twice the row index minus the folding coordinate: `2 * (row - coordinate)` or `2 * coordinate - row`:
+
+```py
+def _fold_row(self, row, coordinate):
+    return row if row <= coordinate else 2 * coordinate - row
+```
+
+For the horizontal fold, the row index doesn't change, and the cell index has to be swapped from zero to the folding coordinate, and beyond the folding coordinate it has to be moved to the left. The swapped cell indexes can be calculated as the coordinate minus the cell index minus one, while the ones beyond the folding point would be the cell index minus the coordinate minus one. In other words, we can take the absolute value of that difference:
+
+```py
+def _fold_cell(self, cell, coordinate):
+    return cell if cell == coordinate else abs(cell - coordinate) - 1
+```
+
+This is the code I got!
 
 ```
  #  # #  #  ##     #  ### ####  ### ##
@@ -290,7 +304,7 @@ This was my code!
  #  # #  # ###  ####  ### #### #  #  ##
 ```
 
-It's mirrored! I changed the code to reverse it and space the cells:
+It's mirrored! I changed the display logic to reverse it and space the cells:
 
 ```
     # #   # # #     # # # #   # # #     #           # #     #     #   #     #

@@ -9,12 +9,13 @@ class Solution:
         self._polimer = Polymer(template, rules)
 
     def part1(self):
-        counts = self._polimer.element_counts(10).values()
-
-        return max(counts) - min(counts)
+        return self._result(10)
 
     def part2(self):
-        counts = self._polimer.element_counts(40).values()
+        return self._result(40)
+
+    def _result(self, steps):
+        counts = self._polimer.element_counts(steps).values()
 
         return max(counts) - min(counts)
 

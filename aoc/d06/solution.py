@@ -3,7 +3,7 @@ from .lanternfish_population import LanternfishPopulation
 
 class Solution:
     def __init__(self, lines):
-        self._initial_states = [int(state) for state in lines[0].split(',')]
+        self._initial_states = list(map(int, lines[0].split(',')))
 
     def part1(self):
         return self._count_for_days(80)

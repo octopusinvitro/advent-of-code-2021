@@ -12,11 +12,10 @@ class DotsGrid:
         return self.TOKEN if (row, cell) in self._dots else self.SPACE
 
     def _rows(self):
-        last = max(row for row, _ in self._dots)
-
-        return range(last + 1)
+        return self._range(row for row, _ in self._dots)
 
     def _cells(self):
-        last = max(cell for _, cell in self._dots)
+        return self._range(cell for _, cell in self._dots)
 
-        return range(last + 1)
+    def _range(self, last):
+        return range(max(last) + 1)

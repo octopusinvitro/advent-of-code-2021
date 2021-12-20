@@ -1,4 +1,4 @@
-[![AoC 2021 total stars](https://img.shields.io/badge/2021-★_28-ffe300)](https://adventofcode.com/2021)
+[![AoC 2021 total stars](https://img.shields.io/badge/2021-★_30-ffe300)](https://adventofcode.com/2021)
 [![Python version](https://badgen.net/badge/python/3.10/yellow)](Pipfile)
 [![License](https://img.shields.io/github/license/octopusinvitro/advent-of-code-2021)](https://github.com/octopusinvitro/advent-of-code-2021/blob/main/LICENSE)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f298667c6c0acac2ef70/maintainability)](https://codeclimate.com/github/octopusinvitro/advent-of-code-2021/maintainability)
@@ -85,6 +85,7 @@ For example for day one:
 | **[12: Passage Pathing](https://adventofcode.com/2021/day/12)**         | [![Day 12](https://badgen.net/badge/12/%E2%98%85%E2%98%85/yellow)](#day-12) | [log](#day-12) |
 | **[13: Transparent Origami](https://adventofcode.com/2021/day/13)**     | [![Day 13](https://badgen.net/badge/13/%E2%98%85%E2%98%85/yellow)](#day-13) | [log](#day-13) |
 | **[14: Extended Polymerization](https://adventofcode.com/2021/day/14)** | [![Day 14](https://badgen.net/badge/14/%E2%98%85%E2%98%85/yellow)](#day-14) | [log](#day-14) |
+| **[15: Chiton](https://adventofcode.com/2021/day/15)**                  | [![Day 15](https://badgen.net/badge/15/%E2%98%85%E2%98%85/yellow)](#day-15) | [log](#day-15) |
 
 
 ### Day 01
@@ -329,3 +330,12 @@ As someone pointed out, this puzzle was very similar to that on day 6! First par
 I stored the counts of the new insertions but also the counts of the new pairs formed in every step, so that I could use them in the next iteration.
 
 This one took a lot of pen and pencil again, to figure out the right algorithm! At first I had the pairs in a "visited" set, but the trick was that at some point the pairs repeat as well, which is why you need to keep track of their counts too, so that you can count the elements properly.
+
+
+### Day 15
+
+[Solution](aoc/d15/solution.py)
+
+This puzzle was an opportunity to implement the Dijkstra algorithm, which searches for the shortest path between two points in a graph.
+
+I decided to read a bit about it and found [this article](https://www.redblobgames.com/pathfinding/a-star/introduction.html) shared online, which is really nice and has cool animations. I went for an implementation that includes a heuristic in the weight assigned to each node, since we have specific start and end nodes and this can speed up the search.

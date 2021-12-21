@@ -1,4 +1,4 @@
-[![AoC 2021 total stars](https://img.shields.io/badge/2021-★_30-ffe300)](https://adventofcode.com/2021)
+[![AoC 2021 total stars](https://img.shields.io/badge/2021-★_32-ffe300)](https://adventofcode.com/2021)
 [![Python version](https://badgen.net/badge/python/3.10/yellow)](Pipfile)
 [![License](https://img.shields.io/github/license/octopusinvitro/advent-of-code-2021)](https://github.com/octopusinvitro/advent-of-code-2021/blob/main/LICENSE)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f298667c6c0acac2ef70/maintainability)](https://codeclimate.com/github/octopusinvitro/advent-of-code-2021/maintainability)
@@ -86,6 +86,7 @@ For example for day one:
 | **[13: Transparent Origami](https://adventofcode.com/2021/day/13)**     | [![Day 13](https://badgen.net/badge/13/%E2%98%85%E2%98%85/yellow)](#day-13) | [log](#day-13) |
 | **[14: Extended Polymerization](https://adventofcode.com/2021/day/14)** | [![Day 14](https://badgen.net/badge/14/%E2%98%85%E2%98%85/yellow)](#day-14) | [log](#day-14) |
 | **[15: Chiton](https://adventofcode.com/2021/day/15)**                  | [![Day 15](https://badgen.net/badge/15/%E2%98%85%E2%98%85/yellow)](#day-15) | [log](#day-15) |
+| **[16: Packet Decoder](https://adventofcode.com/2021/day/16)**          | [![Day 16](https://badgen.net/badge/16/%E2%98%85%E2%98%85/yellow)](#day-16) | [log](#day-16) |
 
 
 ### Day 01

@@ -25,7 +25,7 @@ class Solution:
         for count in self._counts(binary_numbers):
             bit = Bit.ON.value if (count >= halfsize) else Bit.OFF.value
             most_common += str(bit)
-            less_common += str(int(not bit))
+            less_common += str(Bit.flip(bit))
 
         return (most_common, less_common)
 

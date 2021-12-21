@@ -339,3 +339,15 @@ This one took a lot of pen and pencil again, to figure out the right algorithm! 
 This puzzle was an opportunity to implement the Dijkstra algorithm, which searches for the shortest path between two points in a graph.
 
 I decided to read a bit about it and found [this article](https://www.redblobgames.com/pathfinding/a-star/introduction.html) shared online, which is really nice and has cool animations. I went for an implementation that includes a heuristic in the weight assigned to each node, since we have specific start and end nodes and this can speed up the search.
+
+### Day 16
+
+[Solution](aoc/d16/solution.py)
+
+This puzzle brought back [very, very old memories from my thesis](http://octopusinvitro.gitlab.io/blog/code-and-tech/magnetic-tapes-and-octal-dump-3/), where I had to read list mode files in a similar way to this puzzle. They were stored in magnetic tapes and written using a system called GOOSY developed at GSI. There are still several [very](http://www.khschmidts-nuclear-web.eu/Work_data/Ghelp/Goosydata.htm) [old](https://www-win.gsi.de/frs/technical/daq/frs-unpacking-goosy.asp) pages online about it! And even [the GOOSY buffer documentation](http://web-docs.gsi.de/~go4/goosy/GM_BUFFER.pdf) where the structure of the headers, events and subevents is described (for example, in page 12).
+
+The difference is that back then I had just events with subevents, while here I have packets with subpackets with subpackets, etc. In GOOSY you had short words that were one octal size, so we processed the input in octals rather than hexadecimal. And finally, I am implementing this in python instead of C++, and have (hopefully) come a long way in my coding since then! :D
+
+In this case I used recursion to find all the packets inside the packets and also applied a design pattern called "[composite](https://refactoring.guru/design-patterns/composite)", which is good for when you have tree structures where the trees and the leaves have the same API but the trees can contain leaves inside.
+
+To fully make it a composite it would be good to create a packet class for every type to encapsulate the knowledge of how to calculate the different values. But I was lazy and just created a `Calculator` class to do all the calculations :D

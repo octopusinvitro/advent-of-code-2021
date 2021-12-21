@@ -19,9 +19,17 @@ class Launcher:
     def success_velocities(self):
         success_velocities = set()
 
-        for velocity_x in range(self._target.max_x + 1):
-            for velocity_y in range(-abs(self._target.min_x) - 1, abs(self._target.min_y) + 1):
+        for velocity_x in self._x_window():
+            for velocity_y in self._y_window():
                 if self.shoot(velocity_x, velocity_y):
                     success_velocities.add((velocity_x, velocity_y))
 
         return success_velocities
+
+    def _x_window(self):
+        return range(self._target.max_x + 1)
+
+    def _y_window(self):
+        limit = abs(self._target.min_y)
+
+        return range(-limit, limit + 1)

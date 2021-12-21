@@ -1,4 +1,4 @@
-[![AoC 2021 total stars](https://img.shields.io/badge/2021-★_32-ffe300)](https://adventofcode.com/2021)
+[![AoC 2021 total stars](https://img.shields.io/badge/2021-★_34-ffe300)](https://adventofcode.com/2021)
 [![Python version](https://badgen.net/badge/python/3.10/yellow)](Pipfile)
 [![License](https://img.shields.io/github/license/octopusinvitro/advent-of-code-2021)](https://github.com/octopusinvitro/advent-of-code-2021/blob/main/LICENSE)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f298667c6c0acac2ef70/maintainability)](https://codeclimate.com/github/octopusinvitro/advent-of-code-2021/maintainability)
@@ -87,6 +87,7 @@ For example for day one:
 | **[14: Extended Polymerization](https://adventofcode.com/2021/day/14)** | [![Day 14](https://badgen.net/badge/14/%E2%98%85%E2%98%85/yellow)](#day-14) | [log](#day-14) |
 | **[15: Chiton](https://adventofcode.com/2021/day/15)**                  | [![Day 15](https://badgen.net/badge/15/%E2%98%85%E2%98%85/yellow)](#day-15) | [log](#day-15) |
 | **[16: Packet Decoder](https://adventofcode.com/2021/day/16)**          | [![Day 16](https://badgen.net/badge/16/%E2%98%85%E2%98%85/yellow)](#day-16) | [log](#day-16) |
+| **[17: Trick Shot](https://adventofcode.com/2021/day/17)**              | [![Day 17](https://badgen.net/badge/17/%E2%98%85%E2%98%85/yellow)](#day-17) | [log](#day-17) |
 
 
 ### Day 01
@@ -341,6 +342,7 @@ This puzzle was an opportunity to implement the Dijkstra algorithm, which search
 
 I decided to read a bit about it and found [this article](https://www.redblobgames.com/pathfinding/a-star/introduction.html) shared online, which is really nice and has cool animations. I went for an implementation that includes a heuristic in the weight assigned to each node, since we have specific start and end nodes and this can speed up the search.
 
+
 ### Day 16
 
 [Solution](aoc/d16/solution.py)
@@ -352,3 +354,16 @@ The difference is that back then I had just events with subevents, while here I 
 In this case I used recursion to find all the packets inside the packets and also applied a design pattern called "[composite](https://refactoring.guru/design-patterns/composite)", which is good for when you have tree structures where the trees and the leaves have the same API but the trees can contain leaves inside.
 
 To fully make it a composite it would be good to create a packet class for every type to encapsulate the knowledge of how to calculate the different values. But I was lazy and just created a `Calculator` class to do all the calculations :D
+
+
+### Day 17
+
+[Solution](aoc/d17/solution.py)
+
+In today's puzzle we could solve the first part with maths from day 7, and I am sure the second part could also be solved without using brute force, sadly I didn't figure out how. This will be another puzzle to take a look at again after AoC is over!
+
+We shoot a probe. The `x` component of the velocity always decreases by one unit in every step, until it gets stuck at zero forever. The `y` component always decreases by one unit forever. This means that the `x` component of the position always increases, slower every time, until it saturates at a value when the `x` component of the velocity reaches zero. The `y` component of the position may or may not go up at first and then it always decreases.
+
+The initial value of the `y` component of the velocity is the maximum it will ever have, then it decreases by one in every step. When the `y` velocity becomes zero, the `y` position is at its maximum, then both velocity and position decrease. That means when we go up from zero we are adding to the `y` position `Vy`, plus `Vy - 1` plus `Vy - 2` etc., until `Vy = 0`. This allows us to use the formula `(n + 1) * n / 2` from day 7 to calculate the distance from 0 to the maximum height. What to use as `n` to get the maximum height? Well, when the position hits the X axis again at `y = 0`, the value of the `y` velocity is the initial value, but negative. In the next step, the position will have exactly this value. So the best value for `n` is the absolute value of the target's minimum `y`, if we pass that, the position in the step after `y = 0` would be out of bounds.
+
+For the second part I used brute force, calculating all the velocities that make the probe end in the target area. The search window goes from 0 to the target's maximum `x` horizontally, and from the target's minimum `y` to the value of the speed that made it go to the maximum height in part one: the absolute value of the target's minimum `y`.

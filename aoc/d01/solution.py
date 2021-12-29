@@ -1,6 +1,6 @@
 class Solution:
-    def __init__(self, depths=[]):
-        self._depths = depths
+    def __init__(self, lines):
+        self._depths = list(map(int, lines))
 
     def part1(self):
         scope = range(len(self._depths) - 1)

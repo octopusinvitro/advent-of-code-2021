@@ -10,7 +10,7 @@ from aoc.d05.solution import Solution
 class TestSolution(TestCase):
     def setUp(self):
         path = fixture_path('d05', 'valid_input')
-        lines = FileParser(['', path], Mock()).lines()
+        lines = FileParser(path, Mock()).lines()
         self.solution = Solution(lines)
 
     def test_counts_intersections_between_non_diagonals(self):

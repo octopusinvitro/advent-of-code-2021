@@ -10,7 +10,7 @@ from aoc.d06.solution import Solution
 class TestSolution(TestCase):
     def setUp(self):
         path = fixture_path('d06', 'valid_input')
-        lines = FileParser(['', path], Mock()).lines()
+        lines = FileParser(path, Mock()).lines()
         self.solution = Solution(lines)
 
     def test_80days(self):

@@ -4,7 +4,6 @@ from unittest.mock import Mock
 from ..common import fixture_path
 
 from aoc.file_parser import FileParser
-from aoc.d04.bingo_parser import BingoParser
 from aoc.d04.solution import Solution
 
 
@@ -22,8 +21,7 @@ class TestSolution(TestCase):
             '14 21',
             '10 16'
         ]
-        parser = BingoParser(lines)
-        self.simple_solution = Solution(parser.parse())
+        self.simple_solution = Solution(lines)
 
     def test_calculates_last_winner_score(self):
         self.assertEqual(self.simple_solution.part2(), (15 + 18) * 9)
@@ -36,6 +34,6 @@ class TestSolution(TestCase):
 
     def solution(self):
         path = fixture_path('d04', 'valid_input')
-        parser = BingoParser(FileParser(['', path], Mock()).lines())
+        lines = FileParser(path, Mock()).lines()
 
-        return Solution(parser.parse())
+        return Solution(lines)

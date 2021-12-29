@@ -10,7 +10,7 @@ from aoc.d07.solution import Solution
 class TestSolution(TestCase):
     def setUp(self):
         path = fixture_path('d07', 'valid_input')
-        lines = FileParser(['', path], Mock()).lines()
+        lines = FileParser(path, Mock()).lines()
         self.solution = Solution(lines)
 
     def test_part1(self):
@@ -22,7 +22,7 @@ class TestSolution(TestCase):
 
     def test_part2_with_input_data(self):
         path = data_path('d07')
-        lines = FileParser(['', path], Mock()).lines()
+        lines = FileParser(path, Mock()).lines()
         solution = Solution(lines)
 
         self.assertEqual(solution.part2(), 98231647)

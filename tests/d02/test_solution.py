@@ -1,28 +1,20 @@
 from unittest import TestCase
+from unittest.mock import Mock
 
+from ..common import fixture_path
+
+from aoc.file_parser import FileParser
 from aoc.d02.solution import Solution
 
 
 class TestSolution(TestCase):
     def setUp(self):
-        directions = [
-            'forward 5',
-            'down 5',
-            'forward 8',
-            'up 3',
-            'down 8',
-            'forward 2'
-        ]
+        path = fixture_path('d02', 'valid_input')
+        directions = FileParser(path, Mock()).lines()
         self.solution = Solution(directions)
 
-    def test_part1_calculates_coordinates_product(self):
+    def test_part1(self):
         self.assertEqual(self.solution.part1(), 150)
 
-    def test_part1_has_default_product_if_no_lines_passed(self):
-        self.assertEqual(Solution().part1(), 0)
-
-    def test_part2_calculates_coordinates_product(self):
+    def test_part2(self):
         self.assertEqual(self.solution.part2(), 900)
-
-    def test_part2_has_default_product_if_no_lines_passed(self):
-        self.assertEqual(Solution().part2(), 0)

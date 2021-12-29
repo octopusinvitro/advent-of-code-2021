@@ -25,7 +25,7 @@ Check out the [setup](setup.md) instructions.
 For example for day one:
 
 ```sh
-. bin/run d01
+. bin/run 01
 ```
 
 ### Tests
@@ -51,8 +51,7 @@ For example for day one:
 │   │   └── solution.py
 │   ├── __init__.py
 │   ├── file_parser.py
-│   ├── logger.py
-│   └── result.py
+│   └── logger.py
 ├── data
 │   └── dXX_input
 ├── tests
@@ -61,9 +60,8 @@ For example for day one:
 │   │   ├── __init__.py
 │   │   └── test_solution.py
 │   ├── __init__.py
-│   ├── test_file_parser.py
-│   └── test_result.py
-└── dXX.py
+│   └── test_file_parser.py
+└── run.py
 ```
 
 

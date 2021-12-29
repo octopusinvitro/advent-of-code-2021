@@ -1,6 +1,9 @@
+from .bingo_parser import BingoParser
+
+
 class Solution:
-    def __init__(self, parsed):
-        self._numbers, self._boards = parsed
+    def __init__(self, lines):
+        self._numbers, self._boards = BingoParser(lines).parse()
 
     def part1(self):
         boards = self._boards

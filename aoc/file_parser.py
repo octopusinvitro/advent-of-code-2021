@@ -1,15 +1,11 @@
 class FileParser:
-    def __init__(self, argv, logger):
-        self._argv = argv
+    def __init__(self, path, logger):
+        self._path = path
         self._logger = logger
 
     def lines(self):
-        if not self._argv[1:] or not self._argv[1]:
-            self._logger.print_missing_input_error()
-            return []
-
         try:
-            input_file = open(self._argv[1], 'r')
+            input_file = open(self._path, 'r')
         except (IOError) as error:
             self._logger.print_missing_file_error(error)
             return []

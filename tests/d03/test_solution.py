@@ -1,24 +1,16 @@
 from unittest import TestCase
+from unittest.mock import Mock
 
+from ..common import fixture_path
+
+from aoc.file_parser import FileParser
 from aoc.d03.solution import Solution
 
 
 class TestSolution(TestCase):
     def setUp(self):
-        report = [
-            '00100',
-            '11110',
-            '10110',
-            '10111',
-            '10101',
-            '01111',
-            '00111',
-            '11100',
-            '10000',
-            '11001',
-            '00010',
-            '01010'
-        ]
+        path = fixture_path('d03', 'valid_input')
+        report = FileParser(path, Mock()).lines()
         self.solution = Solution(report)
 
     def test_calculates_power(self):

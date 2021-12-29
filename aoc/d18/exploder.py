@@ -17,17 +17,19 @@ class Exploder:
     def explode(self):
         while(self._right.get()):
             character = Character(self._right.remove_first())
-
-            if character.is_opening_bracket():
-                self._bracket_count += 1
-
-            if character.is_closing_bracket():
-                self._bracket_count -= 1
+            self._update_bracket_count(character)
 
             if self._should_explode():
                 return self._exploded()
 
             self._left.append(character.get())
+
+    def _update_bracket_count(self, character):
+        if character.is_opening_bracket():
+            self._bracket_count += 1
+
+        if character.is_closing_bracket():
+            self._bracket_count -= 1
 
     def _should_explode(self):
         return self._bracket_count >= self.EXPLODE_BRACKET_COUNT

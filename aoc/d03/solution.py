@@ -22,14 +22,14 @@ class Solution:
         halfsize = math.ceil(len(binary_numbers) / 2)
         most_common = less_common = ''
 
-        for count in self._counts(binary_numbers):
+        for count in self._bit_ON_counts(binary_numbers):
             bit = Bit.ON.value if (count >= halfsize) else Bit.OFF.value
             most_common += str(bit)
             less_common += str(Bit.flip(bit))
 
         return (most_common, less_common)
 
-    def _counts(self, binary_numbers):
+    def _bit_ON_counts(self, binary_numbers):
         counts = [0] * len(binary_numbers[0])
 
         for number in binary_numbers:

@@ -112,7 +112,7 @@ I created a `Position` class to store the horizontal and depth coordinates and a
 Then I accumulated the results of the calculations in a dictionary.
 I also created an enum for the direction, although plain constants would have worked (and are less verbose).
 
-I liked [this Typescript solution](https://github.com/pmareke/advent-of-code-2021/blob/main/src/day_02/submarine.ts) from @pmareke.
+I liked [this Typescript solution](https://github.com/pmareke/advent-of-code/blob/main/src/2021/day_02/submarine.ts) from @pmareke.
 
 **What went well:**
 * The logic I had dismissed in day one turned out to be useful for today too so I extracted it into generic classes.
